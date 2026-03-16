@@ -1,0 +1,52 @@
+# Data
+*.csv
+*.parquet
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.h5
+*.hdf5
+
+# Model artifacts
+*.pt
+*.pth
+*.ckpt
+*.keras
+*.pb
+*.tflite
+*.onnx
+*.joblib
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# W&B
+wandb/
+
+# Kaggle
+*.meta.json
