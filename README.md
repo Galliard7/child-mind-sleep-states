@@ -60,27 +60,6 @@ Weighted combination of GRU-UNet predictions with "Tubo" (a ResNet34-based 1D U-
 ```
 
 
-## Kaggle Notebooks
-
-Key notebooks published on Kaggle ([illidan7](https://www.kaggle.com/illidan7)):
-
-- [Fork of Zzzs - LSTM training TF](https://www.kaggle.com/code/illidan7/fork-of-zzzs-lstm-training-tf)
-- [Zzzs - GRUNET Infer Base - 2 feats](https://www.kaggle.com/code/illidan7/zzzs-grunet-infer-base-2-feats)
-- [Zzzs - GRUNET Train Base - 2feats](https://www.kaggle.com/code/illidan7/zzzs-grunet-train-base-2feats)
-- [Zzzs - GRUNET Train Base - 7feats](https://www.kaggle.com/code/illidan7/zzzs-grunet-train-base-7feats)
-- [Zzzs - IlliEnsemble - tubo_detect](https://www.kaggle.com/code/illidan7/zzzs-illiensemble-tubo-detect)
-- [Zzzs - IlliEnsemble](https://www.kaggle.com/code/illidan7/zzzs-illiensemble)
-- [Zzzs - Init Explore2](https://www.kaggle.com/code/illidan7/zzzs-init-explore2)
-- [Zzzs - InitExplore3](https://www.kaggle.com/code/illidan7/zzzs-initexplore3)
-- [Zzzs - LSTM training TF](https://www.kaggle.com/code/illidan7/zzzs-lstm-training-tf)
-- [Zzzs - LSTM training](https://www.kaggle.com/code/illidan7/zzzs-lstm-training)
-- [Zzzs - NumpyFolds - fold 1](https://www.kaggle.com/code/illidan7/zzzs-numpyfolds-fold-1)
-- [Zzzs - NumpyFolds - fold 2](https://www.kaggle.com/code/illidan7/zzzs-numpyfolds-fold-2)
-- [Zzzs - NumpyFolds - fold 7](https://www.kaggle.com/code/illidan7/zzzs-numpyfolds-fold-7)
-- [Zzzs - SeriesFolds - Experiment](https://www.kaggle.com/code/illidan7/zzzs-seriesfolds-experiment)
-- [Zzzs - StdScalerFit](https://www.kaggle.com/code/illidan7/zzzs-stdscalerfit)
-
-*Plus 5 more notebooks — see [full profile](https://www.kaggle.com/illidan7/code)*
 ## Tech Stack
 
 - **Models**: GRU-UNet (PyTorch), BiLSTM (TensorFlow/Keras), LightGBM
