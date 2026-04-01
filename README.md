@@ -1,5 +1,7 @@
 # Child Mind Institute — Detect Sleep States (Kaggle Competition)
 
+![Competition Header](assets/header.png)
+
 ## Overview
 
 The [Child Mind Institute - Detect Sleep States](https://www.kaggle.com/competitions/child-mind-institute-detect-sleep-states) competition (2023) required detecting sleep onset and wakeup events from wrist-worn accelerometer data (anglez + enmo signals sampled every 5 seconds). Evaluated as event detection Average Precision across multiple time tolerances.
@@ -33,6 +35,31 @@ Applied sigmoid activation, low-pass Butterworth filtering for signal smoothing,
 ### 6. Ensemble
 
 Weighted combination of GRU-UNet predictions with "Tubo" (a ResNet34-based 1D U-Net segmentation model), leveraging model diversity between recurrent and convolutional architectures.
+
+## Results
+
+| Model | Notes |
+|---|---|
+| LightGBM baseline | Insufficient for temporal patterns |
+| Bidirectional LSTM | Chunked 48-hour windows, custom LR scheduling |
+| GRU-UNet | KL divergence loss, event probability peaks |
+| **GRU-UNet + Tubo Ensemble** | Recurrent + convolutional diversity |
+
+> Metric: Event detection Average Precision across multiple time tolerances
+
+## Architecture
+
+```mermaid
+graph LR
+    A["127M Rows Accelerometer Data<br>(anglez + enmo)"] --> B["Feature Engineering<br>121 features, 9 window sizes"]
+    B --> C["Gaussian-Smoothed Targets<br>onset/wakeup distributions"]
+    C --> D1["GRU-UNet<br>KL divergence loss"]
+    C --> D2["Tubo (ResNet34 1D U-Net)<br>segmentation model"]
+    D1 --> E["Weighted Ensemble"]
+    D2 --> E
+    E --> F["Butterworth LPF +<br>Local Maxima Detection"]
+    F --> G["Sleep Events<br>(onset/wakeup)"]
+```
 
 ## Repository Structure
 
